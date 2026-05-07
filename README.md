@@ -53,7 +53,7 @@ A responsive and animated school website created using HTML, CSS and JavaScript.
 Add your GitHub Pages website link here.
 
 Example:
-https://yourusername.github.io/project-name/
+https://navodayanbandarajan.github.io/My-simple-school-website/
 
 ---
 
