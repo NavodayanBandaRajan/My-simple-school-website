@@ -1,0 +1,910 @@
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <title>
+      School website
+    </title>
+  <style>
+    body{
+      margin:0;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    
+    
+    .navbar{
+      display: flex;
+      text-align: center;
+       justify-content: space-between;
+      align-items: center;
+      color: white;
+      gap: 16px;
+      backdrop-filter: blur(10px);
+      background: transparent;
+      background-color: black;
+      top: 0;
+      z-index: 1000;
+      position: fixed;
+      border-radius: 12px;
+      margin: 3px;    
+      width: 100%;
+      width: calc(100% - 6px);
+      box-sizing: border-box;
+    }
+    
+    .logo{
+    margin-right: 4px; 
+    }
+    
+    .nav{
+      text-decoration: none;
+    }
+    
+    .nav a{
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      padding: 6px;
+    }
+    
+    .nav a:hover{
+      background-color: white;
+      color: black;
+      border-radius: 19px;
+      padding: 7px;
+      margin: 10px;
+    }
+    .content{
+      width: 100%;
+    }
+    .section{
+      margin: 0 auto;
+      padding-top: 80px;
+      border-radius: 16px;
+      border: none;
+      min-height: 100vh;
+      width: 100%;
+    }
+    
+    #home{
+      background-image: url("https://source.unsplash.com/1600x900/?school");
+      background-position: center;
+      width: 100%;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: Sans-Serif,Arial;
+      font-weight: bold;
+      width: 100%;
+    }
+    
+    #home h1{
+      border: double 2px black;
+      border-radius: 13px;
+      text-align: center;
+    }
+    
+    #home p{
+      margin: auto;
+      font-size: 16px;
+    }
+    
+   #home h3{
+      border: none;
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      text-align: center;
+    } 
+    
+    #classes{
+      background: url('');
+     min-width: 100%;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+    
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+     #classes .card{
+      width: 80%;
+      min-height: 90vh;
+      border-radius: 17px;
+      box-shadow: 0 5px 15px gray;
+      
+    }
+    
+      #classes .card1:hover,
+      #classes .card2:hover,
+      #classes .card3:hover,
+      #classes .card4:hover{
+      transform: translateY(-10px);
+      transition: 0.3s;
+      background: lightgreen;
+      color: black;
+      font-size: 17px;
+      size: 80px;
+      
+    }
+    
+    #classes .card1{
+      background: linear-gradient(135deg, red, yellow);
+      border-radius: 17px;
+    }
+        
+    #classes .card2{
+      background: linear-gradient(135deg, pink, yellow);
+      border-radius: 17px;
+    }
+           
+    #classes .card3{
+      background: linear-gradient(135deg, lightblue, yellow);
+      border-radius: 17px;
+    }
+    
+    #classes .card4{
+      background: linear-gradient(135deg, pink, yellow,red);
+      border-radius: 17px;
+    }
+    
+    #facilities{
+      background: url('');
+      width: 100%;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    #facilities .cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+     #facilities .card{
+      background: linear-gradient(135deg, lightblue, white);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px gray;
+    transition: 0.3s;
+    }
+    
+      #facilities .card1:hover,
+      #facilities .card2:hover,
+      #facilities .card3:hover,
+      #facilities .card4:hover,
+      #facilities .card5:hover,
+      #facilities .card6:hover,
+      #facilities .card7:hover,
+      #facilities .card8:hover{
+      transform: translateY(-10px);
+      transition: 0.3s;
+      background: lightgreen;
+      color: black;
+      font-size: 17px;
+      size: 80px;
+      
+    }
+    
+    #facilities .card1{
+      background: linear-gradient(135deg, red, yellow);
+      border-radius: 17px;
+    }
+        
+    #facilities .card2{
+      background: linear-gradient(135deg, pink, yellow);
+      border-radius: 17px;
+    }
+           
+    #facilities .card3{
+      background: linear-gradient(135deg, lightblue, yellow);
+      border-radius: 17px;
+    }
+    
+    #facilities .card4{
+      background: linear-gradient(135deg, pink, yellow,red);
+      border-radius: 17px;
+    }
+    
+           
+    #facilities .card5{
+      background: linear-gradient(135deg, lightblue, yellow);
+      border-radius: 17px;
+    }
+    
+    #facilities .card6{
+      background: linear-gradient(135deg, pink, yellow,red);
+      border-radius: 17px;
+    }
+    
+     #facilities .card7{
+      background: linear-gradient(135deg, pink, yellow,red);
+      border-radius: 17px;
+    }
+               
+    #facilities .card8{
+      background: linear-gradient(135deg, lightblue, yellow);
+      border-radius: 17px;
+    }
+    
+    #performance{
+      background: linear-gradient(145deg, aqua,lightgreen);
+      width: 100%;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+   
+    #performance h1{
+      text-align: center;
+    } 
+       
+    #performance .cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+     #performance .card{
+      background: linear-gradient(135deg, lightblue, white);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px gray;
+    transition: 0.3s;
+    }
+    
+      #performance .card1:hover,
+      #performance .card2:hover,
+      #performance .card3:hover,
+      #performance .card4:hover,
+      #performance .card5:hover,
+      #performance .card6:hover,
+      #performance .card7:hover{
+      transform: translateY(-10px);
+      transition: 0.3s;
+      background: lightgreen;
+      color: black;
+      font-size: 17px;
+      size: 80px;
+      
+    }
+    
+    #performance .card1{
+      background: linear-gradient(135deg, red, yellow);
+      border-radius: 17px;
+      text-align: center;
+    }
+        
+    #performance .card2{
+      background: linear-gradient(135deg, pink, yellow);
+      border-radius: 17px;
+      text-align: center;
+    }
+           
+    #performance .card3{
+      background: linear-gradient(135deg, lightblue, yellow);
+      border-radius: 17px;
+      text-align: center;
+    }
+    
+    #performance .card4{
+      background: linear-gradient(135deg, pink, yellow,red);
+      border-radius: 17px;
+      text-align: center;
+    }
+    
+           
+    #performance .card5{
+      background: linear-gradient(135deg, lightblue, yellow);
+      border-radius: 17px;
+      text-align: center;
+    }
+    
+    #performance .card6{
+      background: linear-gradient(135deg, pink, yellow,red);
+      border-radius: 17px;
+      text-align: center;
+    }
+    
+     #performance .card7{
+      background: linear-gradient(135deg, pink, yellow,red);
+      border-radius: 17px;
+    }
+        
+    
+    #gallery{
+      background: linear-gradient(140deg, pink, white);
+      width: 100%;
+      text-align: center;
+      display: grid;
+     gap: 10px;
+      padding: 20px;
+    }
+    
+   .gallery-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+} 
+    
+    #gallery h1{
+      text-align: center;
+    }
+    
+    #gallery img{
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+     border-radius: 10px;
+    }
+    
+    #lightbox{
+     display: none;
+     position: fixed;
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;
+     background: rgba(0,0,0,0.9);
+     justify-content: center;
+     align-items: center;
+     z-index: 9999;
+    }
+
+    #lightbox-img{
+     max-width: 90%;
+     max-height: 90%;
+     border-radius: 10px;
+    }
+
+/* Close Button */
+    #close{
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     font-size: 40px;
+     color: white;
+     cursor: pointer;
+    }
+    
+    #intro{
+      background: url('');
+      width: 100%;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    #contact{
+     background: #111;
+     color: white;
+     text-align: center;
+     padding: 40px 20px;
+    }
+
+    .contact-container{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 30px;
+     margin-top: 20px;
+    }
+
+    .contact-info{
+     text-align: left;
+     line-height: 1.8;
+   }
+
+   .contact-form{
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+    }
+
+   .contact-form input,
+   .contact-form textarea{
+     padding: 10px;
+     border-radius: 8px;
+     border: none;
+     outline: none;
+    }
+
+    .contact-form button{
+     background: orange;
+     color: white;
+     padding: 10px;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: 0.3s;
+    }
+
+    .contact-form button:hover{
+     background: red;
+    }
+    
+    
+    #map{
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      color: white;
+      
+    }
+    .message{
+      margin: 4px;
+      text-align: center;
+      border: solid 1px white;
+      border-rdaius: 14px;
+    }
+    
+    #map{
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.map-container{
+  margin-top: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px gray;
+}
+  
+   
+   @media (max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    padding:10px;
+  }
+
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .nav a{
+    font-size:12px;
+    padding:5px;
+  }
+
+  .section{
+    padding:100px 15px;
+    min-height:auto;
+  }
+
+  .cards,
+  .gallery-container,
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  #gallery{
+    grid-template-columns:1fr;
+  }
+
+  #gallery img{
+    height:180px;
+  }
+
+  iframe{
+    height:250px;
+  }
+
+  h1{
+    font-size:24px;
+  }
+
+  h2{
+    font-size:20px;
+  }
+
+  p,li{
+    font-size:14px;
+  }
+}
+    
+    .footer{
+      background-color: aqua;
+      border-radius: 16px;
+      text-align: center;
+      width: 100%;
+      height: 65px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+  </head>
+<body>
+  
+    <div class="navbar">
+      <div class="logo">
+        <h2>
+          Sunrise
+        </h2>
+      </div>
+     <div class="nav">
+      <a href="#home">HOME</a>
+      <a href="#classes">CLASSES</a>
+      <a href="#facilities">FACILITIES</a>
+      <a href="#performance">PERFORMANCE</a>
+      <a href="#gallery">GALLERY</a>
+
+      <a href="#contact">CONTACT</a>
+      <a href="#map">Map</a>
+     </div>
+    </div>
+  
+  <br>
+  <br>
+
+  <content>
+    <br>
+    <div class="section" id="home" data-aos="fade-up" data-aos-delay="400">
+      <br>
+      <br>
+      <h1> SUNRISE PUBLIC SCHOOL</h1>
+      <br>
+      
+      <ul>
+        <li> Center of the best quality education.</li>
+      </ul>
+      
+      <p> You're most welcome in your school 'SUNRISE PUBLIC SCHOOL'. We provide a quality education and tradition education to your children.Admission open from April To July.</p>
+      <h3> Highlights</h3>
+      <ul>
+        <li> Transport Facility.</li>
+        <li> All grade classes.</li>
+      </ul>
+    </div>
+    
+    <div class="section" id="classes" data-aos="fade-right" data-aos-delay="400">
+      <br>
+      <h2> CLASSES</h2>
+      <br>
+      <br>
+      <div class="cards">
+      <div class="card card1" data-aos="flip-up" data-aos-delay="300">
+      <h3>Classes Range</h3>
+      
+      <ul>
+        <li>Playgroup to 1<sup>st </sup> class.</li>
+         <li>class 1<sup>st</sup>to 6<sup>th</sup> class.</li>
+         <li>Class 6<sup>th</sup> to 9<sup>th</sup> class.</li>
+         <li>class 10<sup>th</sup> to 12<sup>th</sup> class.</li>
+          <li>All streams are available.</li>
+      </ul>
+      </div>
+      <hr>
+       <div class="card card2" data-aos="flip-up" data-aos-delay="300">
+      <br>
+      <h3> Subjects</h3>
+      <ul>
+        <li>Mathematics</li>
+        <li>Science</li>
+        <li>English</li>
+        <li>Hindi</li>
+        <li>Social Science</li>
+        <li>Computer</li>
+        <li>English</li>
+        <li>General Science</li>
+      </ul>
+      <br>
+      </div>
+      <br>
+       <div class="card card3" data-aos="flip-up" data-aos-delay="300">
+      <h3> For higher classes</h3>
+      <ul>
+        <li> Physics</li>
+        <li>Chemistry</li>
+        <li>Biology</li>
+        <li>Accounts</li>
+        <li>Olympiads</li>
+      </ul>
+      <hr>
+      </div>
+    <div class="card card4" data-aos="flip-up" data-aos-delay="300">
+      <br>
+      <h3>Student Development </h3>
+      <ul>
+        <li>Focus on overall development.</li>
+        <li>Discipline & moral values.</li>
+        <li>Communication skills.</li>
+        <li>Doubt clearing sessions.</li>
+        <li>Homework guidance.</li>
+        <li>Weekly tests</li>
+      </ul>
+      <br>
+      </div>
+    </div>
+    </div>
+    <div class="section" id="facilities" data-aos="zoom-in" data-aos-delay="400">
+      <h1> School Facilities</h1>
+      <div class="cards">
+
+  <div class="card card1" data-aos="flip-up" data-aos-delay="300">
+    <h2>💻 Computer Lab</h2>
+    <ul>
+      <li> hp computers.</li>
+      <li> acer computers.</li>
+      <li> samsung computers.</li>
+      <li> Acer tabs are avaliable.</li>
+    </ul>
+    </div>
+  <div class="card card2" data-aos="flip-up" data-aos-delay="300">
+    <h2>📚 Library</h2>
+    <ul>
+      <li> All grade books are avaliable.</li>
+      <li> Olympiad level books.</li>
+      <li> Knowledge books.</li>
+      <li> Competition books.</li>
+      <li> NDA/CDS/JEE/NEET preparation guide and solved paper books.</li>
+    </ul>
+    </div>
+  <div class="card card3" data-aos="flip-up" data-aos-delay="300">
+    <h2>🔬 Science Lab</h2>
+    <ul>
+       <li> Physics Lab.</li>
+      <li> Chemistry Lab.</li>
+      <li> Bio Lab.</li>
+      <li> Tinkering Lab.</li>
+    </ul>
+    </div>
+  <div class="card card4" data-aos="flip-up" data-aos-delay="300">
+     <h2>⚽ Playground</h2>
+    <ul>
+       <li> Vast blank ground.</li>
+      <li> Large Park.</li>
+      <li> Specific game coaches.</li>
+      <li> Interschool Competitions are conducted.</li>
+    </ul>
+    
+    </div>
+    <div class="card card5" data-aos="flip-up" data-aos-delay="300">
+      <h2>🚌 Transport</h2>
+      <ul>
+       <li> Bus transportation is avaliable.</li>
+      <li> Van transport facility.</li>
+      <li> Students may come through his vehicle(i.e.,Bycycle,Bike).</li>
+    </ul>
+      </div>
+  <div class="card card6" data-aos="flip-up" data-aos-delay="300">
+    <h2>📺 Smart Classes</h2>
+    <ul>
+       <li> Classes with Smart Visions.</li>
+      <li> Experienced teachers.</li>
+      <li> CCTV Security in all classes.</li>
+    </ul>
+    </div>
+    
+    <div class="card card7" data-aos="flip-up" data-aos-delay="300">
+    <h2>📷 Security</h2>
+    <ul>
+       <li> Gallery with CCTV cameras.</li>
+      <li> MTs and Gate guards are available.</li>
+      <li> CCTV Security in all  playgrounds.</li>
+    </ul>
+    </div>
+   <div class="card card8" data-aos="flip-up" data-aos-delay="300">
+    <h2>Other</h2>
+    <ul>
+       <li> Clean drinking water.</li>
+      <li>Medival facility.</li>
+      <li> Separate toilets.</li>
+    </ul>
+    </div>  
+</div>
+      
+    </div>
+    
+    <div class="section" id="performance" data-aos="fade-left" data-aos-delay="400">
+      <h1>Acedemic progress</h1>
+      <div class="cards">
+
+  <div class="card card1" data-aos="flip-up" data-aos-delay="300">
+    <h2>📈 100% Result</h2>
+    
+     <ul>
+       <li> 95%+ board results.</li>
+      <li> Topper students every year.</li>
+      <li> 100% pass percentage.</li>
+      <li> High scoring students.</li>
+    </ul>
+    
+    </div>
+  <div class="card card2" data-aos="flip-up" data-aos-delay="300">
+    <h2>🏆 Achievements</h2>
+     
+     <ul>
+       <li> Olympiad winners 🏆.</li>
+      <li> District level rank holders.</li>
+      <li> Scholarship achievers.</li>
+      <li> Competition winners.</li>
+    </ul>
+    
+    </div>
+  <div class="card card3" data-aos="flip-up" data-aos-delay="300">
+    <h2>📊 Exams & Tests</h2>
+    <ul>
+       <li> Regular weekly tests.</li>
+      <li> Monthly exams.</li>
+      <li> Pre-board exams.</li>
+      <li> Continuous assessment.</li>
+    </ul>
+    
+    </div>
+  <div class="card card4" data-aos="flip-up" data-aos-delay="300">
+    <h2>📄 Progress Reports</h2>
+      <ul>
+       <li> Individual progress tracking.</li>
+      <li> Report cards 📄.</li>
+      <li> Parent-teacher meetings.</li>
+      <li> Performance analysis.</li>
+    </ul>
+    
+    </div>
+  <div class="card card5" data-aos="flip-up" data-aos-delay="400">
+    <h2>⚽ Sports Achievements</h2>
+          <ul>
+       <li> Annual Sports Day winners 🏆.</li>
+      <li> House competitions (Red, Blue, Green House).</li>
+      <li> Inter-class matches.</li>
+      <li> Cricket tournament champions 🏏.</li>
+    </ul>
+    
+    </div>
+  <div class="card card6" data-aos="flip-up" data-aos-delay="400">
+    <h2>>🎭 CO-CURRICULAR ACTIVITIES</h2>
+       <ul>
+       <li> Independence Day,Republic Day,Teachers’Day 👩‍🏫,Children’s Day 🧒.</li>
+      <li> Essay writing ✍️,Quiz competition ❓.</li>
+      <li> Diwali celebration 🪔,Holi celebration 🌈.</li>
+      <li> Public speaking skills.</li>
+    </ul>
+    
+    </div>
+
+</div>
+    </div>
+    
+    <div class="section" id="gallery" data-aos="zoom-in-up" data-aos-delay="400">
+      
+      <div class="gallery-container">
+      <h1> Gallery</h1>
+      <hr>
+      <br>
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+      <img src="#">
+    </div>
+    </div>
+      <div id="lightbox">
+  <span id="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+    
+    
+    <div class="section" id="contact" data-aos="fade-up" data-aos-delay="400">
+       <h2>Contact Us</h2>
+
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>📍 Address: Sunrise Public School, India</p>
+      <p>📞 Phone: +91 9876543210</p>
+      <p>📧 Email: sunrise@gmail.com</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+    </div>
+   
+    <div class="section" id="map" data-aos="fade-left" data-aos-delay="400">
+      <h2> Our Location</h2>
+      
+        <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Kaushambi,Uttar%20Pradesh&output=embed"
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+      
+    </div>
+    <div class="footer">
+    <h2>©2026Garvish_Rajan_sreyans</h2>
+    </div>
+  </div>
+  
+ <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> 
+  
+  <script>
+    
+         AOS.init({
+    duration: 1000,
+    once: false
+  }); 
+    
+let images = document.querySelectorAll("#gallery img");
+let lightbox = document.getElementById("lightbox");
+let lightboxImg = document.getElementById("lightbox-img");
+let close = document.getElementById("close");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+close.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+/* click outside image to close */
+lightbox.addEventListener("click", (e) => {
+  if(e.target !== lightboxImg){
+    lightbox.style.display = "none";
+  }
+});
+
+
+
+function sendMessage(e){
+  e.preventDefault();
+  alert("Message sent successfully ✅");
+}
+
+
+
+</script>
+  
+</body>
+</html>
